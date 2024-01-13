@@ -23,5 +23,5 @@ public class Shooting : MonoBehaviour
         // Set the bullet velocity to move to the right
         rb.velocity = new Vector2(bulletSpeed, 0f);
     }
-
+}
    

@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class Player : MonoBehaviour
 {
+    public int health;
+
     public float moveSpeed = 5f;
     public LayerMask groundLayer;
 
