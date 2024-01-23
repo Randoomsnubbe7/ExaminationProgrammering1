@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int health;
+    public int health = 3; // Set initial health
 
     public float moveSpeed = 5f;
     public LayerMask groundLayer;
@@ -21,8 +21,19 @@ public class Player : MonoBehaviour
         Vector2 movement = new Vector2(horizontalInput, verticalInput) * moveSpeed * Time.deltaTime;
         transform.Translate(movement);
 
-        // Check if the player has touched the ground, and if so, "kill" the player
+        // Check if the player has touched the ground, and if so, "take damage"
         if (isGrounded)
+        {
+            TakeDamage(1); // You can customize the damage amount
+        }
+    }
+
+    void TakeDamage(int damageAmount)
+    {
+        health -= damageAmount;
+
+        // Check if the player has run out of health
+        if (health <= 0)
         {
             Die();
         }
@@ -31,8 +42,9 @@ public class Player : MonoBehaviour
     void Die()
     {
         // Implement your death logic here, such as playing a death animation, disabling controls, or respawning
-        Debug.Log("Player has touched the ground and died!");
+        Debug.Log("Player has run out of health and died!");
         // For simplicity, we'll just deactivate the GameObject
         gameObject.SetActive(false);
     }
 }
+

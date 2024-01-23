@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8524961828060790518}
   - component: {fileID: 7593554873728862710}
   - component: {fileID: -2486376748737068909}
-  - component: {fileID: -3548292190695572552}
   - component: {fileID: -7489205872998209619}
   m_Layer: 0
   m_Name: boolet
@@ -160,14 +159,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!81 &-3548292190695572552
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642691639833977243}
-  m_Enabled: 1
 --- !u!82 &-7489205872998209619
 AudioSource:
   m_ObjectHideFlags: 0

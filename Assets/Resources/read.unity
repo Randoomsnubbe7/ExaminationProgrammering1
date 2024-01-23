@@ -456,6 +456,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 642691639833977243, guid: 190aa50fb4ddf1c4c81f90d7693b9b10, type: 3}
   bulletSpeed: 1
   shootCooldown: 3
+  damageAmount: 1
 --- !u!1 &939519822
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,6 +899,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 642691639833977243, guid: 190aa50fb4ddf1c4c81f90d7693b9b10, type: 3}
   bulletSpeed: 1
   shootCooldown: 3
+  damageAmount: 1
 --- !u!1001 &1163965673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1064,6 +1066,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -1.49
       objectReference: {fileID: 0}
+    - target: {fileID: 5855377567512621633, guid: 0e275db82f5d7354f9501288be5f18e2, type: 3}
+      propertyPath: health
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7021865878981622077, guid: 0e275db82f5d7354f9501288be5f18e2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1148,6 +1154,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 642691639833977243, guid: 190aa50fb4ddf1c4c81f90d7693b9b10, type: 3}
   bulletSpeed: 1
   shootCooldown: 3
+  damageAmount: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

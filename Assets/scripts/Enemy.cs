@@ -9,14 +9,31 @@ public class Enemy : MonoBehaviour
     public float bulletSpeed = 10f;
     public float shootCooldown = 3f; // Time delay between shots
     private float timeSinceLastShot = 0f;
+    public int damageAmount = 1;
 
-    void OnTriggerEnter2D(Collider2D other)
+
+    public void TakeDamage(int damageAmount)
     {
-        Debug.Log("Collision detected with: " + other.gameObject.name);
+        hp -= damageAmount;
+        // if enemy has less than 1 it get destroy 
+        if (hp <= 0)
+        {
+            GameObject.Destroy(gameObject);
 
-       
+        }
+
     }
 
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+        if (bullet != null)
+        {
+            TakeDamage(bullet.damage);
+            Destroy(collision.gameObject);
+        }
+    }
 
     private void Update()
     {
@@ -49,12 +66,5 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void TakeDamage(int damage)
-    {
-        hp -= damage;
-        if (hp <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
+
 }
